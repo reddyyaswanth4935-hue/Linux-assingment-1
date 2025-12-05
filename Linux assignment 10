@@ -1,0 +1,148 @@
+1. UNAR COMMAND  
+
+What is unar?
+unar is an open-source command-line tool to extract RAR, ZIP, 7Z, TAR, GZIP, BZIP2 and many other archive formats.
+It belongs to “The Unarchiver” project which was originally created for macOS and later ported to Linux.
+
+Why unar is used?
+- Extract RAR files without WinRAR
+- Supports more formats than unzip or tar
+- Extracts password-protected archives
+- Works fully from terminal
+- Supports Unicode file names
+- Useful in cybersecurity for extracting tools, payloads, malware samples
+
+History:
+- Created around 2006–2008 by Dag Ågren
+- Was designed for macOS as a powerful unarchiver
+- Later ported to Linux with commands: unar (extract) and lsar (list)
+- Used widely in Linux and security distros like Kali
+
+Install in Kali Linux:
+sudo apt update
+sudo apt install unar
+
+Basic Syntax:
+unar [options] archive-file
+
+Important Usage Examples:
+1. Extract a RAR file:
+   unar file.rar
+2. Extract ZIP:
+   unar file.zip
+3. Extract to specific folder:
+   unar file.rar -o /path/to/folder
+4. List files inside archive:
+   lsar file.rar
+5. Extract password-protected RAR:
+   unar -p mypassword file.rar
+6. Extract multiple RAR files:
+   unar *.rar
+
+Real-Life Uses:
+- Extracting downloaded files/tools
+- Handling compressed malware samples
+- CTF (Capture The Flag) challenges
+- Handling multi-part RAR archives
+
+
+2. DU -SH COMMAND — FULL DETAILED NOTES
+
+What is du?
+du = Disk Usage
+Used to display the size of files and folders.
+Part of GNU coreutils, available on all Linux/Unix systems.
+
+Why du -sh is used?
+- To check folder size
+- To find large folders
+- To monitor disk usage
+- To clean storage
+- Useful in servers, hacking investigations, log analysis
+
+Meaning of Options:
+-s → Summary (total size only)
+-h → Human-readable (KB/MB/GB/TB)
+
+Basic Syntax:
+du [options] folder
+
+Practical Usage Examples:
+1. Check size of any folder:
+   du -sh foldername
+2. Check size of current directory:
+   du -sh .
+3. Show sizes of all folders:
+   du -sh *
+4. Sort folders by size:
+   du -sh * | sort -h
+5. Check size of a file:
+   du -sh file.txt
+6. Size of root directory:
+   sudo du -sh /
+
+Cybersecurity Uses:
+- Finding large log files
+- Checking malware drop locations
+- Analysing storage-heavy attack files
+- Cleaning system space
+
+
+3. KALI LINUX USAGE GUIDE (FULL)
+
+Basic Interface:
+Kali includes:
+- Terminal
+- Tools (Nmap, Wireshark, Hydra, Metasploit, Aircrack)
+- File Manager
+- Desktop environment (XFCE/GNOME)
+- Browser (Firefox/Chromium)
+
+Basic Linux Commands:
+ls               → Show files
+cd foldername    → Change directory
+pwd              → Show current directory
+mkdir folder     → Create folder
+rm file          → Delete file
+rm -r folder     → Delete folder
+cat file         → View file contents
+nano file        → Edit text file
+
+Update Kali:
+sudo apt update && sudo apt upgrade -y
+
+Install Tools:
+sudo apt install nmap
+sudo apt install hydra
+sudo apt install aircrack-ng
+
+Network Commands:
+ifconfig
+ip a
+ping google.com
+
+Ethical Hacking Tool Usage:
+Nmap Scan:
+  nmap -sV 192.168.1.1
+
+Brute Force (Hydra):
+  hydra -l admin -P passwords.txt 192.168.1.10 ssh
+
+Wi-Fi Monitoring:
+  airmon-ng start wlan0
+
+Password Cracking:
+  john hash.txt
+
+Start Metasploit:
+  msfconsole
+
+File Compression Tools:
+zip file.zip file1
+unzip file.zip
+7z x file.7z
+unar file.rar 
+                                                       Name: Meesala yaswanth Reddy
+                                                                  Class:3c
+                                                                 Roll no:21
+                                                                  Usn no:ENG24CY0132 
